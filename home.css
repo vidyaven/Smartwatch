@@ -1,0 +1,104 @@
+#demo {
+      background-image: url("smartwatch.jpg"); 
+    /* background-image: url("spacetalk_watch_thumb800.webp");  */
+    background-repeat:no-repeat;
+    background-size: cover;
+    width: 500px;
+    height: 850px;
+}
+
+#time {
+    padding-top: 400px;
+    color: rgb(255, 255, 255);
+    font-size: 70px;
+}
+
+#date {
+    color: rgb(255, 255, 255);
+    margin-top: -50px;
+}
+
+#space {
+    height: 100px;
+}
+
+#nav {
+    word-spacing: 2cm;
+    color: blue;
+}
+
+a {
+    text-decoration: none;
+}
+
+#color {
+    color: white;
+}
+
+
+/* message */
+
+#mes {
+    color: white;
+    overflow-y: scroll;
+    border: 1px solid black;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    height: 360px;
+    text-align: left;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#mes::-webkit-scrollbar {
+    display: none;
+}
+
+#mes {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+#d3 {
+    height: 250px;
+}
+
+#sp {
+    height: 45px;
+}
+
+
+/* music */
+
+#space1 {
+    height: 255px;
+}
+
+#music {
+    width: 350px;
+    height: 370px;
+    background-color: rgb(163, 161, 161);
+    border-radius: 20px;
+}
+
+#backimg {
+    width: 300px;
+    height: 250px;
+    background-color: rgb(6, 99, 143);
+    border-radius: 10px;
+}
+
+#st {
+    color: white;
+}
+
+#sp {
+    color: white;
+}
+
+#cr {
+    color: white;
+}

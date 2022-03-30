@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="home.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+    <center>
+        <div id="demo">
+            <div id="d3" class="row"></div>
+            <div id="mes">
+                 <h3 id="up">ARWINF</h3>
+                <p id="down">
+                    FREE2GB data on 67829378364 only for you! install and register on Airtel Thanks App Today
+                </p>
+                <h3 id="up1">TX-GLAKES</h3>
+                <p id="down1">Exclusive Invite:Join Us for Greate Lakes Live Masterclass On Marketing Strategy</p>
+                <h3 id="up2">AL-650002</h3>
+                <p id="down2"> AIRTEL UNLIMITED pack is experied soon!Recharge Now</p>
+                <h3 id="up3">c</h3>
+                <p id="down3">Along with Python and Java, C forms a “good foundation” for learning how to program, Gorton says. As one of the first programming languages ever developed, C has served as the foundation for writing more modern languages such as Python,
+                    Ruby, and PHP. </p>
+                    <h3 id="up4">HTML</h3>
+                    <p id="down4">HTML tutorial or HTML 5 tutorial provides basic and advanced concepts of HTML. Our HTML tutorial is developed for beginners and professionals. In our tutorial, </p>
+            </div>
+            <div id="sp">
+            </div>
+            <nav id="nav" class="navbar navbar-light bg-light">
+                <div class="container">
+
+                    <a id="color" class="navbar-brand" href="home.html">
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                    </a>
+                    <a id="color" class="navbar-brand" href="music.html">
+                        <i class="fas fa-music"></i>
+                    </a>
+                    <a id="color" class="navbar-brand" href="timer.html">
+                        <i class="fas fa-clock"></i> </a>
+                </div>
+            </nav>
+
+
+        </div>
+
+    </center>
+    <script>
+
+//ajax
+var http=new XMLHttpRequest();
+            http.onreadystatechange=function()
+            {
+                if(this.readyState==4 && this.status==200){
+
+              
+                document.getElementById("demo").innerHTML=this.responseText;
+              
+            }
+            xhttp.open("GET", "message.html", true);
+           
+           xhttp.send();
+
+            }
+
+        $(document).ready(function() {
+            $("#up").click(function() {
+                $("#down").toggle()
+
+            });
+            $("#up1").click(function() {
+                $("#down1").toggle()
+
+            });
+            $("#up2").click(function() {
+                $("#down2").toggle()
+
+            });
+            $("#up3").click(function() {
+                $("#down3").toggle()
+
+            });
+            $("#up4").click(function() {
+                $("#down4").toggle()
+
+            });
+        });
+    </script>
+</body>
+
+</html>

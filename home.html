@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+
+</head>
+
+<body>
+    <center>
+        <div id="demo">
+            <h1 id="time"></h1>
+            <h4 id="date"></h4>
+            <div id="space" class="row"></div>
+            <nav id="nav" class="navbar navbar-light bg-light">
+                <div class="container">
+
+                    <a id="color" class="navbar-brand" href="message.html">
+                        <i class="fas fa-envelope"></i> </a>
+                    <a id="color" class="navbar-brand" href="music.html">
+                        <i class="fas fa-music"></i>
+                    </a>
+                    <a id="color" class="navbar-brand" href="timer.html">
+                        <i class="fas fa-clock"></i> </a>
+                </div>
+            </nav>
+
+        </div>
+    </center>
+
+    <script>
+       
+
+        function displaytime() {
+
+//ajax
+var http=new XMLHttpRequest();
+            http.onreadystatechange=function()
+            {
+                if(this.readyState==4 && this.status==200){
+
+              
+                document.getElementById("demo").innerHTML=this.responseText;
+               
+            }
+            xhttp.open("GET", "home.html", true);
+           
+           xhttp.send();
+
+            }
+
+
+            const date = new Date();
+            document.getElementById("time").innerHTML = date.toLocaleTimeString();
+            setTimeout(function() {
+                displaytime()
+            }, 1000);
+        }
+
+        function displaydate() {
+            var x = d.getDate();
+            console.log(x);
+            var y = d.getFullYear();
+            console.log(y);
+            const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+           
+            let name = month[d.getMonth()];
+            console.log(name)
+            document.getElementById("date").innerHTML = x + "  " + name + "  " + y
+        }
+        displaytime();
+
+        displaydate();
+    </script>
+</body>
+
+</html>

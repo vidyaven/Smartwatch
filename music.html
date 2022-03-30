@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+
+</head>
+<body>
+    <center>
+    <div id="demo">
+        <div id="space1"></div>
+        <div id="music">
+            <br>
+             <br>
+        <img id="backimg" src="aaj phir.jfif">
+
+
+            <br><br>
+    <button onclick="pauseaudio()" id="back" class="fa fa-backward" type="button"></button>
+    <button class="fa fa-play" onclick="display()" id="play"></button>
+     <button onclick="next()" id="forward" class="fa fa-forward" ></button>
+
+    <audio src="01 - Arikil Pathiye.mp3" id="a"></audio>
+    <div class="slider_container">
+        <div class="current-time"></div>
+        <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+
+    </div>
+</div>
+</div>
+
+    <nav id="nav" class="navbar navbar-light bg-light">
+        <div class="container">
+            <a id="color" class="navbar-brand" href="home.html">
+                <i class="fa fa-home" aria-hidden="true"></i>
+            </a>
+            <a id="color" class="navbar-brand" href="message.html">
+                <i class="fas fa-envelope"></i> </a>
+
+            <a id="color" class="navbar-brand" href="timer.html">
+                <i class="fas fa-clock"></i> </a>
+        </div>
+    </nav>
+</center>
+    <script>
+        var a1=""
+        var c=0
+        var d = document.getElementById("play")
+        a1=document.getElementById("a")
+         var i=0;
+         
+        function display(){
+            
+            var music1 = new XMLHttpRequest();
+                music1.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var song1 = JSON.parse(this.responseText);
+                        console.log(song1);
+                        a = song1.s;
+                        console.log(a)
+                        c = a[i].song;
+                        console.log(c)
+                        
+                        // a1.src=c
+$(document).ready (function()
+ {
+   $("#play").click(function()
+    {
+        $("a1").attr("src","c")
+
+ })
+})
+
+       if (d.className == "fa fa-play") {
+       d.className = "fa fa-pause";
+       a1.play();
+
+ }
+       else {
+       d.className = "fa fa-play";
+       a1.pause();
+ }
+
+
+                       
+
+}
+
+                }
+    
+                music1.open("GET", "songs.json", true);
+               
+                music1.send();
+    
+      
+        }
+
+        function pauseaudio()
+        {
+            i=i-1
+            display();
+        }
+function next(){
+    i=i+1
+    display();
+}
+    </script>
+</body>
+</html>
